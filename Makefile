@@ -45,6 +45,9 @@ install: venv ## Install package in editable mode (runtime deps only)
 test: setup ## Run pytest suite
 	@$(PYTHON) -m pytest $(TESTS) -v
 
+.PHONY: run-tests
+run-tests: test ## Alias for `make test`
+
 .PHONY: build
 build: setup ## Build source and wheel distributions
 	@$(PYTHON) -m build

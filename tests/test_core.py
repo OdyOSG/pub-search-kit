@@ -1,6 +1,6 @@
 import pytest
 
-from pub_search_py.core import Article, choose_best_url, normalize_doi
+from pub_search_kit.core import Article, choose_best_url, normalize_doi
 
 
 @pytest.mark.parametrize(

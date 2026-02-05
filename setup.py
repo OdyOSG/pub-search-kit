@@ -14,7 +14,7 @@ def read_readme() -> str:
 
 setup(
     name="pub-search-kit",
-    version="0.1.0",
+    version="0.2.0",
     author="Numan Burak Fidan",
     author_email="numanburakfidan@yandex.com",
     description="Unified adapters for querying biomedical publication APIs.",

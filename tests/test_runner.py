@@ -1,6 +1,6 @@
 import pytest
 
-from pub_search_py import Article, ArticleSearchProvider, search_across_adapters
+from pub_search_kit import Article, ArticleSearchProvider, search_across_adapters
 
 
 class DummyAdapter(ArticleSearchProvider):

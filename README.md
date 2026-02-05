@@ -16,16 +16,16 @@ Included adapters
 
 | Module | Class | API |
 | --- | --- | --- |
-| `pub_search_py.adapters.europe_pmc` | `EuropePMCSearchAdapter` | Europe PMC REST |
-| `pub_search_py.adapters.pubmed` | `PubMedSearchAdapter` | NCBI E-utilities (esearch/efetch) |
-| `pub_search_py.adapters.plos` | `PlosSearchAdapter` | PLOS Search API |
-| `pub_search_py.adapters.medrxiv` | `MedRxivSearchAdapter` | medRxiv endpoint on api.biorxiv.org |
-| `pub_search_py.adapters.biorxiv` | `BioRxivSearchAdapter` | bioRxiv endpoint on api.biorxiv.org |
-| `pub_search_py.adapters.openalex` | `OpenAlexSearchAdapter` | OpenAlex Works |
-| `pub_search_py.adapters.core_v3` | `CoreV3SearchAdapter` | CORE v3 works (requires API key) |
-| `pub_search_py.adapters.semantic_scholar` | `SemanticScholarSearchAdapter` | Semantic Scholar Graph |
-| `pub_search_py.adapters.clinical_trials` | `ClinicalTrialsGovSearchAdapter` | ClinicalTrials.gov API v2 |
-| `pub_search_py.adapters.springer_nature` | `SpringerNatureMetaSearchAdapter` | Springer Nature Meta v2 (requires API key) |
+| `pub_search_kit.adapters.europe_pmc` | `EuropePMCSearchAdapter` | Europe PMC REST |
+| `pub_search_kit.adapters.pubmed` | `PubMedSearchAdapter` | NCBI E-utilities (esearch/efetch) |
+| `pub_search_kit.adapters.plos` | `PlosSearchAdapter` | PLOS Search API |
+| `pub_search_kit.adapters.medrxiv` | `MedRxivSearchAdapter` | medRxiv endpoint on api.biorxiv.org |
+| `pub_search_kit.adapters.biorxiv` | `BioRxivSearchAdapter` | bioRxiv endpoint on api.biorxiv.org |
+| `pub_search_kit.adapters.openalex` | `OpenAlexSearchAdapter` | OpenAlex Works |
+| `pub_search_kit.adapters.core_v3` | `CoreV3SearchAdapter` | CORE v3 works (requires API key) |
+| `pub_search_kit.adapters.semantic_scholar` | `SemanticScholarSearchAdapter` | Semantic Scholar Graph |
+| `pub_search_kit.adapters.clinical_trials` | `ClinicalTrialsGovSearchAdapter` | ClinicalTrials.gov API v2 |
+| `pub_search_kit.adapters.springer_nature` | `SpringerNatureMetaSearchAdapter` | Springer Nature Meta v2 (requires API key) |
 
 Installation
 ------------
@@ -48,7 +48,7 @@ Usage
 -----
 
 ```python
-from pub_search_py import ArticleSearchProvider, EuropePMCSearchAdapter
+from pub_search_kit import ArticleSearchProvider, EuropePMCSearchAdapter
 
 def dump_headlines(searcher: ArticleSearchProvider, keyword: str) -> None:
     articles = searcher.search_by_keyword(keyword, max_items=5)
@@ -65,7 +65,7 @@ finally:
 Parallel search across adapters:
 
 ```python
-from pub_search_py import (
+from pub_search_kit import (
     EuropePMCSearchAdapter,
     PubMedSearchAdapter,
     search_across_adapters,

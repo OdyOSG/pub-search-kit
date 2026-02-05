@@ -1,7 +1,7 @@
 [project]
-name = "pub-search-py"
-version = "0.1.0"
-description = "Add your description here"
+name = "pub-search-kit"
+version = "0.2.0"
+description = "Unified adapters for querying biomedical publication APIs."
 readme = "README.md"
 authors = [
     { name = "numanburakfidan", email = "numanburakfidan@yandex.com" }
