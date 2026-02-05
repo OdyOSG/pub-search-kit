@@ -33,13 +33,13 @@ Installation
 The project uses `uv` for packaging, but you can install it into any Python ≥3.12 environment directly from GitHub:
 
 ```bash
-pip install "git+https://github.com/numanburakfidan/pub-search-py.git"
+pip install "git+https://github.com/odyosg/pub-search-py.git"
 ```
 
 If you prefer `uv`, clone the repository and run:
 
 ```bash
-git clone https://github.com/numanburakfidan/pub-search-py.git
+git clone https://github.com/odyosg/pub-search-py.git
 cd pub-search-py
 uv sync
 ```
@@ -92,7 +92,7 @@ Development
 -----------
 
 ```bash
-git clone https://github.com/numanburakfidan/pub-search-py.git
+git clone https://github.com/odyosg/pub-search-py.git
 cd pub-search-py
 uv sync            # install dev deps
 PYTHONPATH=src pytest  # add your tests
