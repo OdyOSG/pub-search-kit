@@ -59,6 +59,24 @@ lint: setup ## Run ruff lint checks
 	@$(PIP) install ruff
 	@$(PYTHON) -m ruff check $(SRC) $(TESTS)
 
+.PHONY: release
+release: ## Tag version from pyproject.toml and push main + tag
+	@VERSION=$$(python3 - <<'PY'
+import pathlib, re
+text = pathlib.Path('pyproject.toml').read_text()
+match = re.search(r'^version\s*=\s*"([^"]+)"', text, re.MULTILINE)
+print(match.group(1) if match else '')
+PY
+); \
+	if [ -z "$$VERSION" ]; then \
+		echo "Unable to parse version from pyproject.toml"; \
+		exit 1; \
+	fi; \
+	echo "Tagging release v$$VERSION"; \
+	git tag -a "v$$VERSION" -m "Release v$$VERSION"; \
+	git push origin main; \
+	git push origin "v$$VERSION"
+
 .PHONY: clean
 clean: ## Remove build artifacts and caches
 	@rm -rf build dist *.egg-info htmlcov .pytest_cache .mypy_cache
