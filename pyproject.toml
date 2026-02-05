@@ -1,0 +1,24 @@
+[project]
+name = "pub-search-py"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "numanburakfidan", email = "numanburakfidan@yandex.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "requests>=2.31",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=8.0",
+]
+dev = [
+    "pytest>=8.0",
+]
+
+[build-system]
+requires = ["uv_build>=0.9.28,<0.10.0"]
+build-backend = "uv_build"
